@@ -15,9 +15,9 @@ try:
         print(ls[9])
     except IndexError:
         print("index issue")
-except KeyError:
-    print("key issue")
+except Exception as e:
+    print(e)
 else:
     print("Else statement")
 finally:
-    print("Code end....")
+    print("I'm always Executed")
