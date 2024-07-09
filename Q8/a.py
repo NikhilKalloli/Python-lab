@@ -3,7 +3,7 @@ import random
 numbers = []
 
 for i in range(20):
-    numbers.append(random.randint(1, 100))
+    numbers.append(random.randint(1, 10000))
 
 print("Random numbers: ", numbers)
 
