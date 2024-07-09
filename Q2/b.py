@@ -1,13 +1,3 @@
-# Write a python program to create a list with all the subject names of the 4th 
-# semester and perform the following operations. 
-# • Display the list using for loop. 
-# • Display 2nd and 5th element of the list. 
-# • Display first 4 elements of the list using the range of indexes. 
-# • Display last 4 elements of the list using the range of negative indexes. 
-# • Display if "Python Programming Lab" is available in the List or not. 
-# • Demonstrate the working of append () and insert () function. 
-# • Demonstrate the working of remove() and pop() function. 
-
 subjects = ["Data Structures", "Computer Networks", "Operating Systems", "Python Programming Lab", "Java Programming Lab", "Computer Networks Lab", "Operating Systems Lab"]
 
 print("List of subjects in 4th semester:")

@@ -1,25 +1,28 @@
-# Write  a  python  program  to  utilize  NumPy  and  perform  the  following 
-# operations. 
-# • Read and display a 2D Array. 
-# • Display the array elements in the reverse order. 
-# • Display all the elements of principal diagonal elements. 
-# • Sort the 2D array in ascending and descending order
-
 import numpy as np
 
-a = np.array([])
-for i in range(4):
-  for j in range(3):
-    k=int(input("Enter element: "))
-    a = np.append(a, k)
-b=a.reshape(2,len(a)//2)
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter number of columns: "))
 
-print("array: \n",b)
+matrix = []
 
-print("\nReversed without for loop:\n",np.array(list(reversed(b))))
+for i in range(rows):
+    row_input = input(f"Enter {cols} elements for row {i+1}, separated by spaces: ")
+    row = [int(x) for x in row_input.split()]
+    matrix.append(row)
 
-k=[b[i][i] for i in range(2)]
-print("\ndiagnol elements: \n",k,"\n")
+a = np.array(matrix)
 
-print("Ascending: \n",np.sort(b,axis=1),"\n")
-print("Descending: \n",-(np.sort(-b,axis=1)))
+print("\nYour 2D array:")
+print(a)
+
+print("\nReversed array:")
+print(a[::-1, ::-1])
+
+print("\nPrincipal diagonal elements:")
+print(np.diag(a))
+
+print("\nSorted in ascending order:")
+print(np.sort(a))
+
+print("\nSorted in descending order:")
+print(np.sort(a)[:, ::-1])
